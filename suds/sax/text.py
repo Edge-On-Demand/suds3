@@ -17,11 +17,11 @@
 """
 Contains XML text classes.
 """
-
+from builtins import str as text
 from suds import sax
 
 
-class Text(str):
+class Text(text):
     """
     An XML text object used to represent text content.
     @ivar lang: The (optional) language flag.
