@@ -74,7 +74,7 @@ class Text(text):
         return Text(post, lang=self.lang, escaped=self.escaped)
 
     def __add__(self, other):
-        joined = u''.join((self, other))
+        joined = ''.join((self, other))
         result = Text(joined, lang=self.lang, escaped=self.escaped)
         if isinstance(other, Text):
             result.escaped = self.escaped or other.escaped
@@ -111,5 +111,5 @@ class Raw(Text):
         return self
 
     def __add__(self, other):
-        joined = u''.join((self, other))
+        joined = ''.join((self, other))
         return Raw(joined, lang=self.lang)

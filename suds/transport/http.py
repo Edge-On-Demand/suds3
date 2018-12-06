@@ -17,8 +17,11 @@
 """
 Contains classes for basic HTTP transport implementations.
 """
+try:
+    import urllib.request as u2
+except ImportError:
+    import urllib2.request as u2
 
-import urllib.request as u2
 from urllib.error import HTTPError
 from base64 import b64encode
 import socket
