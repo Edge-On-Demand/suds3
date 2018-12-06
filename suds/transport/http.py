@@ -27,7 +27,12 @@ except ImportError:
     from urllib2 import HTTPError
 
 from base64 import b64encode
-from http.cookiejar import CookieJar
+
+try:
+    from http.cookiejar import CookieJar
+except ImportError:
+    from cookielib import CookieJar
+
 from logging import getLogger
 
 from suds.transport import Transport, TransportError, Reply
