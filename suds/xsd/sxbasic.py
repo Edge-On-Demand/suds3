@@ -23,10 +23,14 @@ from suds import *
 from suds.xsd import *
 from suds.xsd.sxbase import *
 from suds.xsd.query import *
-from suds.sax import splitPrefix, Namespace
+from suds.sax import Namespace
 from suds.transport import TransportError
 from suds.reader import DocumentReader
-from urllib.parse import urljoin
+
+try:
+    from urllib.parse import urljoin
+except ImportError:
+    from urlparse import urljoin
 
 
 log = getLogger(__name__)
