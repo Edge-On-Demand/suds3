@@ -17,18 +17,21 @@
 """
 Contains classes for basic HTTP transport implementations.
 """
+import socket
+
 try:
     import urllib.request as u2
+    from urllib.error import HTTPError
 except ImportError:
-    import urllib2.request as u2
+    import urllib2 as u2
+    from urllib2 import HTTPError
 
-from urllib.error import HTTPError
 from base64 import b64encode
-import socket
-from suds.transport import Transport, TransportError, Reply
-from suds.properties import Unskin
 from http.cookiejar import CookieJar
 from logging import getLogger
+
+from suds.transport import Transport, TransportError, Reply
+from suds.properties import Unskin
 
 log = getLogger(__name__)
 

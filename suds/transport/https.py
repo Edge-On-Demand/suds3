@@ -17,12 +17,15 @@
 """
 Contains classes for basic HTTP (authenticated) transport implementations.
 """
+from logging import getLogger
+
+try:
+    from urllib.request import HTTPPasswordMgrWithDefaultRealm, HTTPBasicAuthHandler
+except ImportError:
+    from urllib2 import HTTPPasswordMgrWithDefaultRealm, HTTPBasicAuthHandler
 
 from suds.transport.http import HttpTransport
-from logging import getLogger
-from urllib.request import (
-    HTTPPasswordMgrWithDefaultRealm,
-    HTTPBasicAuthHandler)
+
 
 log = getLogger(__name__)
 
