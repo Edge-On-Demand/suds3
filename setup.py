@@ -28,6 +28,9 @@ setup(
     author='Cackharot (original Jeff Ortel)',
     author_email='cackharot@gmail.com',
     packages=find_packages(exclude=['tests']),
+    install_requires=[
+        'future'
+    ],
     url='https://github.com/cackharot/suds-py3',
     test_suite='tests',
     license='LGPL',
@@ -38,6 +41,6 @@ setup(
         'Programming Language :: Python :: 3',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)',
-        'Operating System :: OS Independent',
+        'Operating System :: OS Independent'
     ]
 )
