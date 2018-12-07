@@ -15,12 +15,11 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 
-import suds
 from setuptools import setup, find_packages
 
 setup(
     name='suds-py3',
-    version=suds.__version__,
+    version='1.3.3.0',
     description="Lightweight SOAP client",
     long_description="""The "suds-p3" is a lightweight soap-based client for python3
     licensed under LGPL. This is a mirror of http://svn.fedorahosted.org/svn/suds/trunk/
